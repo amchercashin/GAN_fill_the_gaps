@@ -19,25 +19,24 @@ class toy_data(object):
         return self.data[:, 0:10]
 
 
-class toy_data(object):
-    def __init__(self):
-        self.mu = 4
-        self.sigma = 0.5
-        # self.range = 8
-        self.x_n = 100
+# class toy_data(object):
+#     def __init__(self):
+#         self.mu = 4
+#         self.sigma = 0.5
+#         # self.range = 8
+#         self.x_n = 10
 
-    def sample(self, x_m=10):
-        samples = np.ndarray((self.x_n, x_m))
-        for i in range(x_m):
-            samples[:,i] = np.random.normal(self.mu, self.sigma, self.x_n)
-        samples.sort(0)
-        return samples
+#     def sample(self, x_m=10):
+#         samples = np.ndarray((self.x_n, x_m))
+#         for i in range(x_m):
+#             samples[:,i] = np.random.normal(self.mu, self.sigma, self.x_n)
+#         samples.sort(0)
+#         return samples
 
-    def NA_example(self):
-        sample = np.random.normal(self.mu, self.sigma, self.x_n).reshape((self.x_n, 1))
-        sample.sort(0)
-        mask = np.random.rand(self.x_n, 1) < 0.6
-        return sample * mask
+#     def NA_example(self):
+#         sample = np.random.normal(self.mu, self.sigma, self.x_n).reshape((self.x_n, 1))
+#         mask = np.random.rand(self.x_n, 1) < 0.8
+#         return sample * mask
 
 # np.histogram
 # plt.plot(toy_data().NA_example())
